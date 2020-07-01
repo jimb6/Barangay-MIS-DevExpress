@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Index="0" QuickAccessItem="True" ImageName="BO_MyDetails">
+        <Items>
+          <Item Id="Event_ListView" QuickAccessItem="True" />
+          <Item Id="@62026cc3-05ce-4db2-8658-5fdeb60e7874" Removed="True">
+            <Items>
+              <Item Id="DemoTask_ListView" Removed="True" />
+              <Item Id="Department_ListView" Removed="True" />
+              <Item Id="Location_ListView" Removed="True" />
+              <Item Id="Position_ListView" Removed="True" />
+              <Item Id="Skill_ListView" Removed="True" />
+            </Items>
+          </Item>
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="PermissionPolicyRole_ListView" Removed="True" />
+          <Item Id="PermissionPolicyUser_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="@f6ecd4dd-69c1-403f-96f9-3619aa6a5892" Caption="Management" ImageName="ManageRules" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Department_ListView" Index="0" ViewId="Department_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Skill_ListView" ViewId="Skill_ListView" ImageName="BO_WorkflowDefinition" ObjectKey="" Index="1" IsNewNode="True" />
+          <Item Id="DemoTask_ListView" ViewId="DemoTask_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Location_ListView" ImageName="Travel_MapPointer" ObjectKey="" ViewId="Location_ListView" IsNewNode="True" />
+          <Item Id="MyDetails" ViewId="PermissionPolicyUser_DetailView" ObjectKey="@CurrentUserID" Caption="My Details" ImageName="BO_MyDetails" IsNewNode="True" />
+          <Item Id="PermissionPolicyRole_ListView" ViewId="PermissionPolicyRole_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="PermissionPolicyUser_ListView" ViewId="PermissionPolicyUser_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Position_ListView" Index="" ViewId="Position_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerAspNetModule" Version="19.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="19.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="19.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="19.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Event_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="54.128440366972477">
+            <LayoutGroup Id="SubjectGroup" RelativeSize="34.463276836158194">
+              <LayoutItem Id="Subject" RelativeSize="52.459016393442624" />
+              <LayoutItem Id="AllDay" RelativeSize="47.540983606557376" />
+            </LayoutGroup>
+            <LayoutGroup Id="Event" RelativeSize="65.536723163841813">
+              <LayoutGroup Id="Event_col1" RelativeSize="37.687366167023555" />
+              <LayoutGroup Id="Event_col2" RelativeSize="62.312633832976445">
+                <LayoutItem Id="Status" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="ReminderTime" ViewItem="ReminderTime" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="45.871559633027523" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="HouseHold_ListView">
+      <MapSettings Provider="Bing" Type="Satellite" />
+    </ListView>
+  </Views>
+</Application>

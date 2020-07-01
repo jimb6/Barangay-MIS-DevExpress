@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title=" Barangay MIS" Copyright="Copyright (C) 2020. {0:Company} All Rights Reserved. " Company="Fraces &amp; Michael" Logo="ChartType_Doughnut" Description=" Barangay Management Information System">
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Navigation">
+        <Items>
+          <Item Id="Event_ListView" Index="0" Caption="Schedules and Events" ImageName="Actions_Calendar" />
+          <Item Id="Resident_ListView" Index="1" Caption="Residents" ImageName="BO_MyDetails" />
+          <Item Id="Blotter_ListView" Index="2" Caption="Blotters" ImageName="BO_Folder" />
+          <Item Id="HouseHold_ListView" Index="3" ImageName="Actions_Home" />
+          <Item Id="Contact_ListView" Index="4" ImageName="BO_Contact" />
+          <Item Id="@62026cc3-05ce-4db2-8658-5fdeb60e7874" Caption="Management" Index="5" ImageName="Open2" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Department_ListView" Index="0" ViewId="Department_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="Skill_ListView" ViewId="Skill_ListView" ImageName="BO_WorkflowDefinition" ObjectKey="" Index="1" IsNewNode="True" />
+              <Item Id="DemoTask_ListView" ViewId="DemoTask_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="Location_ListView" ImageName="Travel_MapPointer" ObjectKey="" ViewId="Location_ListView" IsNewNode="True" />
+              <Item Id="Position_ListView" Index="" ViewId="Position_ListView" ObjectKey="" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="Department_ListView" Index="5" Removed="True" />
+          <Item Id="Position_ListView" Index="6" Removed="True" />
+          <Item Id="DemoTask_ListView" Removed="True" />
+          <Item Id="Location_ListView" ImageName="Travel_MapPointer" Removed="True" />
+          <Item Id="Skill_ListView" ImageName="BO_WorkflowDefinition" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Event_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="33.904761904761905">
+            <LayoutGroup Id="SubjectGroup" ShowCaption="False" RelativeSize="34.831460674157306">
+              <LayoutItem Id="Subject" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="AllDay" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+            <LayoutGroup Id="Event" RelativeSize="65.1685393258427">
+              <LayoutGroup Id="Event_col1" RelativeSize="37.603305785123965">
+                <LayoutItem Id="StartOn" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="Label" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Location" RelativeSize="36.363636363636367" />
+              </LayoutGroup>
+              <LayoutGroup Id="Event_col2" RelativeSize="62.396694214876035" Caption="Event_col2">
+                <LayoutItem Id="EndOn" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="Status" ViewItem="Status" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="ReminderTime" ViewItem="ReminderTime" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="66.0952380952381" Caption="SizeableEditors">
+            <LayoutItem Id="Description" RelativeSize="100" />
+            <LayoutItem Id="RecurrenceInfoXml" RelativeSize="51.008645533141213" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Resources_Group" Direction="Vertical" RelativeSize="33.142857142857146" Removed="True">
+            <LayoutItem Id="Resources" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Resident_DetailView">
+      <Items>
+        <PropertyEditor Id="Photo" PropertyName="Photo" IsNewNode="True" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="69.714285714285708">
+            <LayoutGroup Id="Person" Index="0" RelativeSize="33.060109289617486">
+              <LayoutGroup Id="Person_col1" RelativeSize="44.071146245059289">
+                <LayoutItem Id="FirstName" RelativeSize="36.363636363636367" />
+                <LayoutItem Id="LastName" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="MiddleName" RelativeSize="36.363636363636367" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col2" RelativeSize="55.928853754940711" Direction="Horizontal" Caption="Person_col2">
+                <LayoutGroup Id="Auto8c37cf14-c425-43a3-b41e-4c3d42360645" ShowCaption="False" Caption="" Index="0" RelativeSize="77.031802120141336" IsNewNode="True">
+                  <LayoutItem Id="Birthday" ViewItem="Birthday" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
+                  <LayoutItem Id="FullName" ViewItem="FullName" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Birthday" ViewItem="Birthday" Index="0" RelativeSize="36.363636363636367" Removed="True" />
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="1" RelativeSize="27.272727272727273" Removed="True" />
+                <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" Index="1" RelativeSize="22.968197879858657" SizeConstraintsType="Custom" MinSize="65, 40" IsNewNode="True" />
+                <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="36.363636363636367" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Resident" Index="1" RelativeSize="43.989071038251367">
+              <LayoutGroup Id="Resident_col1" RelativeSize="50">
+                <LayoutItem Id="TitleOfCourtesy" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="BirthPlace" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Gender" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Age" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="TypeOfBlood" RelativeSize="23.529411764705884" />
+              </LayoutGroup>
+              <LayoutGroup Id="Resident_col2" RelativeSize="50">
+                <LayoutItem Id="Occupation" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="CivilStatus" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Religion" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Nationality" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="HighestEducationalAttainment" RelativeSize="23.529411764705884" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Party" RelativeSize="22.950819672131146">
+              <LayoutItem Id="Address1" RelativeSize="35.714285714285715" Index="0" />
+              <LayoutItem Id="Address2" RelativeSize="28.571428571428573" Index="1" />
+              <LayoutItem Id="DisplayName" RelativeSize="35.714285714285715" Index="2" />
+              <LayoutItem Id="Photo" RelativeSize="27.777777777777779" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="30.285714285714285">
+            <LayoutGroup Id="Skills" RelativeSize="100">
+              <LayoutItem Id="Skills" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="FormerAdresses" RelativeSize="100">
+              <LayoutItem Id="FormerAdresses" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="HouseHolds" RelativeSize="100">
+              <LayoutItem Id="HouseHolds" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Relations" RelativeSize="100">
+              <LayoutItem Id="Relations" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="BlotterRecords" RelativeSize="100">
+              <LayoutItem Id="BlotterRecords" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" RelativeSize="100">
+              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
